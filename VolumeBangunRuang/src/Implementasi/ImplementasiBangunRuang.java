@@ -1,6 +1,7 @@
 package Implementasi;
 
 import entity.Balok;
+import entity.Kubus;
 import interfac.InterfaceBangunRuang;
 
 /*
@@ -22,6 +23,13 @@ double vol ;
         balok.setVolume(vol);
         return vol ;
     }
+        @Override
+    public double getVolumeKubus(Kubus kubus) {
+        vol = kubus.getSisi() * kubus.getSisi() * kubus.getSisi();
+        kubus.setVolume(vol);
+        return vol ;
+    }
+
 
     
 }

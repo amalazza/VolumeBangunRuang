@@ -5,6 +5,7 @@
 package interfac;
 
 import entity.Balok;
+import entity.Kubus;
 
 /**
  *
@@ -13,4 +14,5 @@ import entity.Balok;
 
 public interface InterfaceBangunRuang {//interface
     public double getVolumeBalok(Balok balok);
+    public double getVolumeKubus(Kubus kubus);
 }
