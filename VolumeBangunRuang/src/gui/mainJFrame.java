@@ -27,8 +27,6 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 public class mainJFrame extends javax.swing.JFrame {
 
-    private Component jDekstopPaneSM1;
-
     /**
      * Creates new form mainJFrame
      */
@@ -55,10 +53,11 @@ public class mainJFrame extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jButtonBalok = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jPanel3 = new javax.swing.JPanel();
+        jButtonKubus = new javax.swing.JButton();
+        jDekstopPaneSM1 = new gui.JDekstopPaneSM();
         jInternalFrameBalok = new javax.swing.JInternalFrame();
-        jPanel5 = new javax.swing.JPanel();
-        jLabel5 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jTextFieldPanjang = new javax.swing.JTextField();
@@ -74,7 +73,6 @@ public class mainJFrame extends javax.swing.JFrame {
         jButtonVolKubus = new javax.swing.JButton();
         jPanel8 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
-        jButtonKubus = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(java.awt.SystemColor.controlHighlight);
@@ -125,17 +123,31 @@ public class mainJFrame extends javax.swing.JFrame {
             }
         });
 
-        jPanel3.setBackground(java.awt.SystemColor.controlHighlight);
-        jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(102, 102, 102)));
-        jPanel3.setAutoscrolls(true);
+        jButtonKubus.setBackground(java.awt.SystemColor.controlHighlight);
+        jButtonKubus.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        jButtonKubus.setForeground(java.awt.SystemColor.controlDkShadow);
+        jButtonKubus.setText("Kubus");
+        jButtonKubus.setToolTipText("Volume Balok");
+        jButtonKubus.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
+        jButtonKubus.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButtonKubus.setFocusable(false);
+        jButtonKubus.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButtonKubus.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButtonKubus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonKubusActionPerformed(evt);
+            }
+        });
 
-        jInternalFrameBalok.setBackground(java.awt.SystemColor.controlHighlight);
-        jInternalFrameBalok.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(102, 102, 102), 1, true));
+        jDekstopPaneSM1.setBackground(new java.awt.Color(255, 255, 255));
+        jDekstopPaneSM1.setBorder(javax.swing.BorderFactory.createLineBorder(java.awt.SystemColor.controlDkShadow));
+
         jInternalFrameBalok.setClosable(true);
         jInternalFrameBalok.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
-        jInternalFrameBalok.setForeground(new java.awt.Color(255, 153, 102));
+        jInternalFrameBalok.setIconifiable(true);
+        jInternalFrameBalok.setMaximizable(true);
+        jInternalFrameBalok.setResizable(true);
         jInternalFrameBalok.setTitle("BALOK");
-        jInternalFrameBalok.setPreferredSize(new java.awt.Dimension(457, 270));
         jInternalFrameBalok.setVisible(true);
         jInternalFrameBalok.addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
             public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
@@ -157,10 +169,9 @@ public class mainJFrame extends javax.swing.JFrame {
             }
         });
 
-        jPanel5.setBackground(java.awt.SystemColor.controlHighlight);
-        jPanel5.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Volume Balok"));
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Volume Balok"));
 
-        jLabel5.setText("Panjang :");
+        jLabel6.setText("Panjang :");
 
         jLabel2.setText("Lebar     :");
 
@@ -202,7 +213,7 @@ public class mainJFrame extends javax.swing.JFrame {
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 413, Short.MAX_VALUE)
+                .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, 365, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel9Layout.setVerticalGroup(
@@ -213,50 +224,50 @@ public class mainJFrame extends javax.swing.JFrame {
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jLabel5)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(jLabel6)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextFieldPanjang))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
+                    .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextFieldTinggi))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
+                    .addGroup(jPanel3Layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jTextFieldLebar))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                         .addGap(0, 0, Short.MAX_VALUE)
                         .addComponent(jButton1))
                     .addComponent(jPanel9, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
                     .addComponent(jTextFieldPanjang, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jTextFieldLebar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(jTextFieldTinggi, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton1)
-                .addContainerGap(40, Short.MAX_VALUE))
+                .addContainerGap(141, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jInternalFrameBalokLayout = new javax.swing.GroupLayout(jInternalFrameBalok.getContentPane());
@@ -265,16 +276,25 @@ public class mainJFrame extends javax.swing.JFrame {
             jInternalFrameBalokLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jInternalFrameBalokLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jInternalFrameBalokLayout.setVerticalGroup(
             jInternalFrameBalokLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jInternalFrameBalokLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
+
+        jDekstopPaneSM1.add(jInternalFrameBalok);
+        jInternalFrameBalok.setBounds(0, 0, 457, 389);
 
         jInternalFrameKubus.setClosable(true);
         jInternalFrameKubus.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
+        jInternalFrameKubus.setIconifiable(true);
+        jInternalFrameKubus.setMaximizable(true);
+        jInternalFrameKubus.setResizable(true);
         jInternalFrameKubus.setTitle("KUBUS");
         jInternalFrameKubus.setVisible(true);
         jInternalFrameKubus.addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
@@ -300,11 +320,6 @@ public class mainJFrame extends javax.swing.JFrame {
 
         jLabel4.setText("Panjang ketiga sisi :");
 
-        jTextFieldSisiKubus.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldSisiKubusActionPerformed(evt);
-            }
-        });
         jTextFieldSisiKubus.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
                 jTextFieldSisiKubusKeyPressed(evt);
@@ -330,7 +345,7 @@ public class mainJFrame extends javax.swing.JFrame {
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, 302, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel8Layout.setVerticalGroup(
@@ -368,7 +383,7 @@ public class mainJFrame extends javax.swing.JFrame {
                     .addComponent(jTextFieldSisiKubus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
                 .addComponent(jButtonVolKubus)
-                .addContainerGap(79, Short.MAX_VALUE))
+                .addContainerGap(194, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jInternalFrameKubusLayout = new javax.swing.GroupLayout(jInternalFrameKubus.getContentPane());
@@ -388,44 +403,8 @@ public class mainJFrame extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jInternalFrameBalok, javax.swing.GroupLayout.DEFAULT_SIZE, 491, Short.MAX_VALUE)
-                    .addComponent(jInternalFrameKubus))
-                .addContainerGap(108, Short.MAX_VALUE))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jInternalFrameBalok, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jInternalFrameKubus, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(603, Short.MAX_VALUE))
-        );
-
-        jScrollPane1.setViewportView(jPanel3);
-
-        jButtonKubus.setBackground(java.awt.SystemColor.controlHighlight);
-        jButtonKubus.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
-        jButtonKubus.setForeground(java.awt.SystemColor.controlDkShadow);
-        jButtonKubus.setText("Kubus");
-        jButtonKubus.setToolTipText("Volume Balok");
-        jButtonKubus.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        jButtonKubus.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jButtonKubus.setFocusable(false);
-        jButtonKubus.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButtonKubus.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButtonKubus.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonKubusActionPerformed(evt);
-            }
-        });
+        jDekstopPaneSM1.add(jInternalFrameKubus);
+        jInternalFrameKubus.setBounds(0, 0, 394, 397);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -439,7 +418,8 @@ public class mainJFrame extends javax.swing.JFrame {
                         .addComponent(jButtonBalok, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jButtonKubus, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                    .addComponent(jDekstopPaneSM1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(55, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -451,7 +431,9 @@ public class mainJFrame extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jButtonBalok, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButtonKubus, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jDekstopPaneSM1, javax.swing.GroupLayout.PREFERRED_SIZE, 455, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
@@ -485,7 +467,23 @@ public class mainJFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButtonBalokActionPerformed
 
+    private void jButtonKubusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonKubusActionPerformed
+        // TODO add your handling code here:
+        
+        jInternalFrameKubus.setVisible(true);
+        try {
+                      
+            // TODO add your handling code here:
+            jInternalFrameKubus.setIcon(false);  
+            jInternalFrameKubus.setSelected(true);
+        } catch (PropertyVetoException ex) {
+            Logger.getLogger(mainJFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }//GEN-LAST:event_jButtonKubusActionPerformed
+
     private void jTextFieldPanjangKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldPanjangKeyPressed
+        // TODO add your handling code here:
         if (evt.getKeyCode() == KeyEvent.VK_DOWN){
             jTextFieldLebar.requestFocus();
         }
@@ -508,6 +506,8 @@ public class mainJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextFieldTinggiKeyPressed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+
         if (jTextFieldPanjang.getText().equals("")){
             JOptionPane.showInternalMessageDialog(jDekstopPaneSM1,"Panjang masih kosong !");
             jTextFieldPanjang.requestFocus();
@@ -536,6 +536,7 @@ public class mainJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jInternalFrameBalokInternalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_jInternalFrameBalokInternalFrameDeactivated
+        // TODO add your handling code here:
         if (jInternalFrameBalok.isVisible()){
         }else{
             jTextFieldPanjang.setText("");
@@ -551,21 +552,6 @@ public class mainJFrame extends javax.swing.JFrame {
     private void jInternalFrameBalokInternalFrameOpened(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_jInternalFrameBalokInternalFrameOpened
         // TODO add your handling code here:
     }//GEN-LAST:event_jInternalFrameBalokInternalFrameOpened
-
-    private void jButtonKubusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonKubusActionPerformed
-        // TODO add your handling code here:
-        
-        jInternalFrameKubus.setVisible(true);
-        try {
-                      
-            // TODO add your handling code here:
-            jInternalFrameKubus.setIcon(false);  
-            jInternalFrameKubus.setSelected(true);
-        } catch (PropertyVetoException ex) {
-            Logger.getLogger(mainJFrame.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
-    }//GEN-LAST:event_jButtonKubusActionPerformed
 
     private void jTextFieldSisiKubusKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldSisiKubusKeyPressed
         // TODO add your handling code here:
@@ -604,10 +590,6 @@ public class mainJFrame extends javax.swing.JFrame {
         }
         // TODO add your handling code here:
     }//GEN-LAST:event_jInternalFrameKubusInternalFrameDeactivated
-
-    private void jTextFieldSisiKubusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldSisiKubusActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextFieldSisiKubusActionPerformed
 
     /**
      * @param args the command line arguments
@@ -649,6 +631,7 @@ public class mainJFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButtonBalok;
     private javax.swing.JButton jButtonKubus;
     private javax.swing.JButton jButtonVolKubus;
+    private gui.JDekstopPaneSM jDekstopPaneSM1;
     private javax.swing.JInternalFrame jInternalFrameBalok;
     private javax.swing.JInternalFrame jInternalFrameKubus;
     private javax.swing.JLabel jLabel1;
@@ -657,12 +640,11 @@ public class mainJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
