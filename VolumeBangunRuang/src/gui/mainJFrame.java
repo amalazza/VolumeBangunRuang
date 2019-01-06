@@ -15,6 +15,7 @@ package gui;
 
 import entity.Balok;
 import entity.Kubus;
+import entity.Tabung;
 import java.awt.Color;
 import java.awt.Component;
 import java.awt.Image;
@@ -74,6 +75,16 @@ public class mainJFrame extends javax.swing.JFrame {
         jPanel8 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
+        jInternalFrameTabung = new javax.swing.JInternalFrame();
+        jPanel6 = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jTextFieldJariTabung = new javax.swing.JTextField();
+        jTextFieldTinggiTabung = new javax.swing.JTextField();
+        jButtonVolTabung = new javax.swing.JButton();
+        jPanel10 = new javax.swing.JPanel();
+        jLabel12 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(java.awt.SystemColor.controlHighlight);
@@ -420,6 +431,143 @@ public class mainJFrame extends javax.swing.JFrame {
         jDekstopPaneSM1.add(jPanel5);
         jPanel5.setBounds(0, 0, 540, 410);
 
+        jInternalFrameTabung.setClosable(true);
+        jInternalFrameTabung.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
+        jInternalFrameTabung.setIconifiable(true);
+        jInternalFrameTabung.setMaximizable(true);
+        jInternalFrameTabung.setResizable(true);
+        jInternalFrameTabung.setTitle("TABUNG");
+        jInternalFrameTabung.setVisible(true);
+        jInternalFrameTabung.addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+            public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
+                jInternalFrameTabungInternalFrameDeactivated(evt);
+            }
+            public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+            }
+        });
+
+        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Volume Tabung"));
+
+        jLabel6.setText("Jari - jari (r)    :");
+
+        jLabel7.setText("Tinggi              :");
+
+        jTextFieldJariTabung.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextFieldJariTabungKeyPressed(evt);
+            }
+        });
+
+        jTextFieldTinggiTabung.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextFieldTinggiTabungKeyPressed(evt);
+            }
+        });
+
+        jButtonVolTabung.setText("Hitung Volume");
+        jButtonVolTabung.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVolTabungActionPerformed(evt);
+            }
+        });
+
+        jPanel10.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jLabel12.setFont(jLabel12.getFont().deriveFont(jLabel12.getFont().getStyle() | java.awt.Font.BOLD, 15));
+        jLabel12.setText("Volume : Phi(3,14) x r x r x Tinggi");
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, 309, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel10Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel12)
+                .addContainerGap(19, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addComponent(jButtonVolTabung))
+                    .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel7)
+                            .addComponent(jLabel6))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTextFieldJariTabung)
+                            .addComponent(jTextFieldTinggiTabung))))
+                .addContainerGap())
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(7, 7, 7)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(jTextFieldJariTabung, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(jTextFieldTinggiTabung, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jButtonVolTabung)
+                .addContainerGap(23, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jInternalFrameTabungLayout = new javax.swing.GroupLayout(jInternalFrameTabung.getContentPane());
+        jInternalFrameTabung.getContentPane().setLayout(jInternalFrameTabungLayout);
+        jInternalFrameTabungLayout.setHorizontalGroup(
+            jInternalFrameTabungLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jInternalFrameTabungLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jInternalFrameTabungLayout.setVerticalGroup(
+            jInternalFrameTabungLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jInternalFrameTabungLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jDekstopPaneSM1.add(jInternalFrameTabung);
+        jInternalFrameTabung.setBounds(0, 0, 344, 236);
+
+        jButton2.setText("Tabung");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -431,7 +579,9 @@ public class mainJFrame extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jButtonBalok, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonKubus, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jButtonKubus, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(jDekstopPaneSM1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(55, Short.MAX_VALUE))
@@ -442,9 +592,10 @@ public class mainJFrame extends javax.swing.JFrame {
                 .addGap(23, 23, 23)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButtonBalok, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButtonKubus, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jButtonBalok, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                    .addComponent(jButtonKubus, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(30, 30, 30)
                 .addComponent(jDekstopPaneSM1, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38)
@@ -603,6 +754,68 @@ public class mainJFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jInternalFrameKubusInternalFrameDeactivated
 
+    private void jTextFieldJariTabungKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldJariTabungKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_DOWN){
+            jTextFieldTinggiTabung.requestFocus();
+        }
+    }//GEN-LAST:event_jTextFieldJariTabungKeyPressed
+
+    private void jTextFieldTinggiTabungKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldTinggiTabungKeyPressed
+        // TODO add your handling code here: if (evt.getKeyCode() == KeyEvent.VK_ENTER){
+            if (evt.getKeyCode() == KeyEvent.VK_UP){
+                jTextFieldJariTabung.requestFocus();
+            }else if (evt.getKeyCode() == KeyEvent.VK_ENTER){
+                jButtonVolTabungActionPerformed(null);
+            }
+    }//GEN-LAST:event_jTextFieldTinggiTabungKeyPressed
+
+    private void jButtonVolTabungActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVolTabungActionPerformed
+        // TODO add your handling code here:
+        if (jTextFieldJariTabung.getText().equals("")){
+            JOptionPane.showInternalMessageDialog(jDekstopPaneSM1,"Jari - jari masih kosong !");
+            jTextFieldJariTabung.requestFocus();
+        }else if (jTextFieldTinggiTabung.getText().equals("")){
+            JOptionPane.showInternalMessageDialog(jDekstopPaneSM1,"Tinggi masih kosong !");
+            jTextFieldTinggiTabung.requestFocus();
+        }
+
+        else{
+            try{
+                Tabung tabung = new Tabung();
+                tabung.setJari_jari(Double.parseDouble(jTextFieldJariTabung.getText()));
+                tabung.setTinggi(Double.parseDouble(jTextFieldTinggiTabung.getText()));
+
+                tabung.cetak();
+
+            }catch(NumberFormatException ex){
+                JOptionPane.showInternalMessageDialog(jDekstopPaneSM1,"Inputkanlah angka !\n"+ex.getMessage());
+            }
+        }
+    }//GEN-LAST:event_jButtonVolTabungActionPerformed
+
+    private void jInternalFrameTabungInternalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_jInternalFrameTabungInternalFrameDeactivated
+        // TODO add your handling code here:
+        if (jInternalFrameTabung.isVisible()){
+        }else{
+            jTextFieldJariTabung.setText("");
+            jTextFieldTinggiTabung.setText("");
+        }
+    }//GEN-LAST:event_jInternalFrameTabungInternalFrameDeactivated
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        
+          jInternalFrameTabung.setVisible(true);
+        try {
+                      
+            // TODO add your handling code here:
+            jInternalFrameTabung.setIcon(false);  
+            jInternalFrameTabung.setSelected(true);
+        } catch (PropertyVetoException ex) {
+            Logger.getLogger(mainJFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -640,30 +853,40 @@ public class mainJFrame extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButtonBalok;
     private javax.swing.JButton jButtonKubus;
     private javax.swing.JButton jButtonVolKubus;
+    private javax.swing.JButton jButtonVolTabung;
     private gui.JDekstopPaneSM jDekstopPaneSM1;
     private javax.swing.JInternalFrame jInternalFrameBalok;
     private javax.swing.JInternalFrame jInternalFrameKubus;
+    private javax.swing.JInternalFrame jInternalFrameTabung;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTextFieldJariTabung;
     private javax.swing.JTextField jTextFieldLebar;
     private javax.swing.JTextField jTextFieldPanjang;
     private javax.swing.JTextField jTextFieldSisiKubus;
     private javax.swing.JTextField jTextFieldTinggi;
+    private javax.swing.JTextField jTextFieldTinggiTabung;
     // End of variables declaration//GEN-END:variables
 }
