@@ -4,6 +4,7 @@ import entity.Balok;
 import entity.Kubus;
 import entity.Tabung;
 import entity.Kerucut;
+import entity.Bola;
 import interfac.InterfaceBangunRuang;
 
 /*
@@ -41,6 +42,12 @@ double vol ;
     public double getVolumeKerucut(Kerucut kerucut) {
         vol = 0.3 * (3.14 * kerucut.getJari_jari()* kerucut.getJari_jari() * kerucut.getTinggi()); 
         kerucut.setVolume(vol);
+        return vol ;
+    }
+    @Override
+    public double getVolumeBola(Bola bola) {
+        vol = 3.14 * bola.getJari_jari()* bola.getJari_jari() * bola.getJari_jari(); 
+        bola.setVolume(vol);
         return vol ;
     }
 
