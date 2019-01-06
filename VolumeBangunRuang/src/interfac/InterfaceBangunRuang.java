@@ -7,6 +7,7 @@ package interfac;
 import entity.Balok;
 import entity.Kubus;
 import entity.Tabung;
+import entity.Kerucut;
 
 /**
  *
@@ -17,4 +18,5 @@ public interface InterfaceBangunRuang {//interface
     public double getVolumeBalok(Balok balok);
     public double getVolumeKubus(Kubus kubus);
     public double getVolumeTabung(Tabung tabung);
+    public double getVolumeKerucut(Kerucut kerucut);
 }

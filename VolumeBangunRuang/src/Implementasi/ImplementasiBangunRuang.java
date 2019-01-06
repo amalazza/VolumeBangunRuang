@@ -3,6 +3,7 @@ package Implementasi;
 import entity.Balok;
 import entity.Kubus;
 import entity.Tabung;
+import entity.Kerucut;
 import interfac.InterfaceBangunRuang;
 
 /*
@@ -34,6 +35,12 @@ double vol ;
     public double getVolumeTabung(Tabung tabung) {
         vol = 3.14 * tabung.getJari_jari()* tabung.getJari_jari() * tabung.getTinggi(); 
         tabung.setVolume(vol);
+        return vol ;
+    }
+    @Override
+    public double getVolumeKerucut(Kerucut kerucut) {
+        vol = 0.3 * (3.14 * kerucut.getJari_jari()* kerucut.getJari_jari() * kerucut.getTinggi()); 
+        kerucut.setVolume(vol);
         return vol ;
     }
 

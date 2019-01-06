@@ -14,6 +14,7 @@ package gui;
 
 
 import entity.Balok;
+import entity.Kerucut;
 import entity.Kubus;
 import entity.Tabung;
 import java.awt.Color;
@@ -84,7 +85,17 @@ public class mainJFrame extends javax.swing.JFrame {
         jButtonVolTabung = new javax.swing.JButton();
         jPanel10 = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
+        jInternalFrameKerucut = new javax.swing.JInternalFrame();
+        jPanel7 = new javax.swing.JPanel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jTextFieldJariKerucut = new javax.swing.JTextField();
+        jTextFieldTinggiKerucut = new javax.swing.JTextField();
+        jButtonVolKerucut = new javax.swing.JButton();
+        jPanel11 = new javax.swing.JPanel();
+        jLabel13 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(java.awt.SystemColor.controlHighlight);
@@ -559,12 +570,149 @@ public class mainJFrame extends javax.swing.JFrame {
         );
 
         jDekstopPaneSM1.add(jInternalFrameTabung);
-        jInternalFrameTabung.setBounds(0, 0, 344, 236);
+        jInternalFrameTabung.setBounds(0, 0, 401, 248);
+
+        jInternalFrameKerucut.setClosable(true);
+        jInternalFrameKerucut.setDefaultCloseOperation(javax.swing.WindowConstants.HIDE_ON_CLOSE);
+        jInternalFrameKerucut.setIconifiable(true);
+        jInternalFrameKerucut.setMaximizable(true);
+        jInternalFrameKerucut.setResizable(true);
+        jInternalFrameKerucut.setTitle("KERUCUT");
+        jInternalFrameKerucut.setVisible(true);
+        jInternalFrameKerucut.addInternalFrameListener(new javax.swing.event.InternalFrameListener() {
+            public void internalFrameActivated(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosed(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameClosing(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {
+                jInternalFrameKerucutInternalFrameDeactivated(evt);
+            }
+            public void internalFrameDeiconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameIconified(javax.swing.event.InternalFrameEvent evt) {
+            }
+            public void internalFrameOpened(javax.swing.event.InternalFrameEvent evt) {
+            }
+        });
+
+        jPanel7.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createEtchedBorder(), "Volume Kerucut"));
+
+        jLabel8.setText("Jari - jari (r)    :");
+
+        jLabel9.setText("Tinggi              :");
+
+        jTextFieldJariKerucut.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextFieldJariKerucutKeyPressed(evt);
+            }
+        });
+
+        jTextFieldTinggiKerucut.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                jTextFieldTinggiKerucutKeyPressed(evt);
+            }
+        });
+
+        jButtonVolKerucut.setText("Hitung Volume");
+        jButtonVolKerucut.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVolKerucutActionPerformed(evt);
+            }
+        });
+
+        jPanel11.setBorder(javax.swing.BorderFactory.createEtchedBorder());
+
+        jLabel13.setFont(jLabel13.getFont().deriveFont(jLabel13.getFont().getStyle() | java.awt.Font.BOLD, 15));
+        jLabel13.setText("Volume : 1/3*(Phi(3,14) x r x r x Tinggi)");
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel13, javax.swing.GroupLayout.DEFAULT_SIZE, 366, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel11Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel13)
+                .addContainerGap(19, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextFieldJariKerucut))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addComponent(jLabel9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextFieldTinggiKerucut))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
+                        .addGap(0, 289, Short.MAX_VALUE)
+                        .addComponent(jButtonVolKerucut))
+                    .addComponent(jPanel11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addComponent(jPanel11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(jTextFieldJariKerucut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(jTextFieldTinggiKerucut, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jButtonVolKerucut)
+                .addContainerGap(248, Short.MAX_VALUE))
+        );
+
+        javax.swing.GroupLayout jInternalFrameKerucutLayout = new javax.swing.GroupLayout(jInternalFrameKerucut.getContentPane());
+        jInternalFrameKerucut.getContentPane().setLayout(jInternalFrameKerucutLayout);
+        jInternalFrameKerucutLayout.setHorizontalGroup(
+            jInternalFrameKerucutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jInternalFrameKerucutLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+        jInternalFrameKerucutLayout.setVerticalGroup(
+            jInternalFrameKerucutLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jInternalFrameKerucutLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        jDekstopPaneSM1.add(jInternalFrameKerucut);
+        jInternalFrameKerucut.setBounds(0, 0, 458, 477);
 
         jButton2.setText("Tabung");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
+            }
+        });
+
+        jButton3.setText("Kerucut");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
             }
         });
 
@@ -577,11 +725,13 @@ public class mainJFrame extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButtonBalok, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButtonKubus, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jButtonBalok, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButtonKubus, javax.swing.GroupLayout.PREFERRED_SIZE, 108, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 105, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                     .addComponent(jDekstopPaneSM1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(55, Short.MAX_VALUE))
@@ -595,7 +745,8 @@ public class mainJFrame extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jButtonBalok, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
                     .addComponent(jButtonKubus, javax.swing.GroupLayout.DEFAULT_SIZE, 50, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(30, 30, 30)
                 .addComponent(jDekstopPaneSM1, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(38, 38, 38)
@@ -816,6 +967,67 @@ public class mainJFrame extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
+    private void jTextFieldJariKerucutKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldJariKerucutKeyPressed
+        if (evt.getKeyCode() == KeyEvent.VK_DOWN){
+            jTextFieldTinggiKerucut.requestFocus();
+        }
+    }//GEN-LAST:event_jTextFieldJariKerucutKeyPressed
+
+    private void jTextFieldTinggiKerucutKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextFieldTinggiKerucutKeyPressed
+
+        if (evt.getKeyCode() == KeyEvent.VK_UP){
+            jTextFieldJariKerucut.requestFocus();
+        }else if (evt.getKeyCode() == KeyEvent.VK_ENTER){
+            jButtonVolKerucutActionPerformed(null);
+        }
+    }//GEN-LAST:event_jTextFieldTinggiKerucutKeyPressed
+
+    private void jButtonVolKerucutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVolKerucutActionPerformed
+        // TODO add your handling code here:
+        if (jTextFieldJariKerucut.getText().equals("")){
+            JOptionPane.showInternalMessageDialog(jDekstopPaneSM1,"Jari - jari masih kosong !");
+            jTextFieldJariKerucut.requestFocus();
+        }else if (jTextFieldTinggiKerucut.getText().equals("")){
+            JOptionPane.showInternalMessageDialog(jDekstopPaneSM1,"Tinggi masih kosong !");
+            jTextFieldTinggiKerucut.requestFocus();
+        }
+
+        else{
+            try{
+                Kerucut kerucut = new Kerucut();
+                kerucut.setJari_jari(Double.parseDouble(jTextFieldJariKerucut.getText()));
+                kerucut.setTinggi(Double.parseDouble(jTextFieldTinggiKerucut.getText()));
+
+                kerucut.cetak();
+
+            }catch(NumberFormatException ex){
+                JOptionPane.showInternalMessageDialog(jDekstopPaneSM1,"Inputkanlah angka !\n"+ex.getMessage());
+            }
+        }
+    }//GEN-LAST:event_jButtonVolKerucutActionPerformed
+
+    private void jInternalFrameKerucutInternalFrameDeactivated(javax.swing.event.InternalFrameEvent evt) {//GEN-FIRST:event_jInternalFrameKerucutInternalFrameDeactivated
+        if (jInternalFrameKerucut.isVisible()){
+        }else{
+            jTextFieldJariKerucut.setText("");
+            jTextFieldTinggiKerucut.setText("");
+        } // TODO add your handling code here:
+    }//GEN-LAST:event_jInternalFrameKerucutInternalFrameDeactivated
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        
+          jInternalFrameKerucut.setVisible(true);
+        try {
+                      
+            // TODO add your handling code here:
+            jInternalFrameKerucut.setIcon(false);  
+            jInternalFrameKerucut.setSelected(true);
+        } catch (PropertyVetoException ex) {
+            Logger.getLogger(mainJFrame.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -854,39 +1066,49 @@ public class mainJFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButtonBalok;
     private javax.swing.JButton jButtonKubus;
+    private javax.swing.JButton jButtonVolKerucut;
     private javax.swing.JButton jButtonVolKubus;
     private javax.swing.JButton jButtonVolTabung;
     private gui.JDekstopPaneSM jDekstopPaneSM1;
     private javax.swing.JInternalFrame jInternalFrameBalok;
+    private javax.swing.JInternalFrame jInternalFrameKerucut;
     private javax.swing.JInternalFrame jInternalFrameKubus;
     private javax.swing.JInternalFrame jInternalFrameTabung;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField jTextFieldJariKerucut;
     private javax.swing.JTextField jTextFieldJariTabung;
     private javax.swing.JTextField jTextFieldLebar;
     private javax.swing.JTextField jTextFieldPanjang;
     private javax.swing.JTextField jTextFieldSisiKubus;
     private javax.swing.JTextField jTextFieldTinggi;
+    private javax.swing.JTextField jTextFieldTinggiKerucut;
     private javax.swing.JTextField jTextFieldTinggiTabung;
     // End of variables declaration//GEN-END:variables
 }
